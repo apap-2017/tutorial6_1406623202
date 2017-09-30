@@ -23,5 +23,5 @@ public interface StudentMapper
     void addStudent (StudentModel student);
     
     @Delete("delete from student where npm = #{npm}")
-	String deleteStudent (String npm);
+	void deleteStudent (@Param("npm") String npm);
 }

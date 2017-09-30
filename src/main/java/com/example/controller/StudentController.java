@@ -92,7 +92,7 @@ public class StudentController
     public String delete (Model model, @PathVariable(value = "npm") String npm)
     {
     	if (studentDAO.selectStudent(npm) != null) {
-    		studentDAO.deleteStudent (npm);
+    		studentDAO.deleteStudent(npm);
 
         	return "delete";
     	} else {
