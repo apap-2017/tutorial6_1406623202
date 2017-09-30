@@ -14,6 +14,9 @@ public interface StudentService
 
     void addStudent (StudentModel student);
 
-
+    //Latihan delete
     void deleteStudent (String npm);
+    
+    //Latihan update
+    void updateStudent (StudentModel student);
 }

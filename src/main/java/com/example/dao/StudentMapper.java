@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.example.model.StudentModel;
 
@@ -22,6 +23,11 @@ public interface StudentMapper
     @Insert("INSERT INTO student (npm, name, gpa) VALUES (#{npm}, #{name}, #{gpa})")
     void addStudent (StudentModel student);
     
+    //Latihan delete
     @Delete("delete from student where npm = #{npm}")
 	void deleteStudent (@Param("npm") String npm);
+   
+    //Latihan update
+    @Update("update student set name = #{student.name}, gpa = #{student.gpa} where npm = #{student.npm}")
+    void updateStudent (@Param("student") StudentModel student);
 }

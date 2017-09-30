@@ -40,12 +40,20 @@ public class StudentServiceDatabase implements StudentService
         studentMapper.addStudent (student);
     }
 
-
+    //Latihan delete
     @Override
     public void deleteStudent (String npm)
     {
     	studentMapper.deleteStudent(npm);
     	log.info("student " + npm + " deleted");
+    }
+
+    //Latihan update
+    @Override
+    public void updateStudent (StudentModel student)
+    {
+    	studentMapper.updateStudent(student);
+    	log.info("student " + student.getNpm() + " updated");
     }
 
 }

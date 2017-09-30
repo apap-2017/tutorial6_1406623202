@@ -87,7 +87,7 @@ public class StudentController
         return "viewall";
     }
 
-
+    //Latihan delete
     @RequestMapping("/student/delete/{npm}")
     public String delete (Model model, @PathVariable(value = "npm") String npm)
     {
